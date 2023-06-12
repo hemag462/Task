@@ -1,0 +1,17 @@
+Given a string S, check if it is palindrome or not.
+
+Example 1:
+
+Input: S = "abba"
+Output: 1
+Explanation: S is a palindrome
+
+#User function Template for python3
+class Solution:
+	def isPalindrome(self, S):
+		# code here
+		m=S[::-1]
+		if S==m:
+		    return 1
+		else:
+		    return 0
