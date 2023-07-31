@@ -1,0 +1,53 @@
+Write a function CheckPassword(str) which will accept the string as an argument or parameter and validates the password. It will return 1 if the conditions are satisfied else it’ll return 0?
+
+The password is valid if it satisfies the below conditions:
+
+It should contain at least 4 characters.
+At least 1 numeric digit should be present.
+1 Capital letter should be there.
+Password should not contain space or slash.
+The starting character should not be a number.
+Sample Test Case:
+
+Input:
+
+bB1_89
+
+Output:
+
+1
+------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>....
+s=input()
+if len(s)>=4 and any(map(str.isdigit,s)) and any(map(str.isalpha,s)) and " " not in s and '/' not in s and s[0] not in "0123456789":
+    print("1")
+else:
+    print('0')
+=============================
+=== RESTART: C:\Users\RRR\AppData\Local\Programs\Python\Python311\practice.py ==
+bB1_89
+1
+-----------------------------------------------------------------------------------------------------------------------------
+
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+A word is a maximal 
+substring
+ consisting of non-space characters only.
+
+ 
+
+Example 1:
+
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+------------------------->>>>>>>>>>>>>>>>>>>>>>>.
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        st=s.strip()
+        c=0
+        sm=st.split()
+        a=sm[-1]
+        return len(a)
+            
+=========================================
